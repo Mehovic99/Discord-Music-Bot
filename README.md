@@ -16,6 +16,9 @@ The client is used to initiate the BOT with the said commands
 
 ## Song class
 
+![Song class](https://user-images.githubusercontent.com/76923830/142196941-7d791804-f926-478c-a5c5-505412fa6362.JPG)
 
-
-
+The above image shows the Song class. Its nothing advanced. Just used YouTube Development (DL) in order to be able
+to process the song with the commands that I have written. I have one unresolved issue which i will update on later.
+The issue is that sometimes the BOT does not want to pause the song. The BOT will always be able to leave the channel
+with the disconnect command, meaning that no other commands are affected with the pause bug.
