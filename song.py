@@ -7,7 +7,7 @@ class music(commands.Cog):
     self.client = client
   
   @commands.command()
-  async def disconnect(self, ctx):
+  async def stop(self, ctx):
     await ctx.voice_client.disconnect()
     await ctx.send("Monke stopped. Monke sad")
   
@@ -20,6 +20,7 @@ class music(commands.Cog):
       await voice_channel.connect()
     else:
       await ctx.voice_client.move_to(voice_channel)
+    await ctx.send("Monke understood. Monke now playing: " + url)
     ctx.voice_client.stop()
     FFMPEG_OPTIONS = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5', 'options': '-vn'}
     YDL_OPTIONS = {'format':"bestaudio"}
@@ -32,13 +33,13 @@ class music(commands.Cog):
   
   @commands.command()
   async def pause(self, ctx):
-    await ctx.voice_client.pause()
     await ctx.send("Monke paused. Monke wait")
+    await ctx.voice_client.pause()
   
   @commands.command()
   async def resume(self, ctx):
-    await ctx.voice_client.resume()
     await ctx.send("Monke continues. Monke happy")
+    await ctx.voice_client.resume()
 
 
 def setup(client):
