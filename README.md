@@ -12,10 +12,13 @@ There are three classes: Main, Song and keep_alive
 The above image shows the Main class that I have built. I used Discord Development commanad cogs in order to import the
 commands that I have set for my bot inside the main class so that it can be executed on launch. Seocond, I defined
 within the client the prefix that the Bot should use in order to execute its commands that have been set in the class Song.
-The client is used to initiate the BOT with the said commands
+The client is used to initiate the BOT with the said commands.
 
 **UPDATE:** I have imported flask in order to create a temporary testing server to see how the bot will handle on a discord server.
-The class that implements this feature is the new class called **keep_alive**
+The class that implements this feature is the new class called **keep_alive**.
+
+**UPDATE:** Another feature that has been added is that now I have created an environment for my BOT token so that it can remain a secret
+and still be operable to other users, without the BOT being modified for malicious use.
 
 ### Song class
 
@@ -28,3 +31,10 @@ to ensure that the bot is indeed working properly.
 
 ### Keep Alive class
 
+![keep alive](https://user-images.githubusercontent.com/76923830/142287455-3d193197-f879-48a5-b57f-25fb780ae512.JPG)
+
+The above image shows the keep_alive class that I have built. It uses flask in order to be able to connect to a server
+and to constantly ping back the program in order to allow the program to be active for an increased period of time. The
+code is fairly simple and does not need any further descriptions. The main feature of the code is imporeted inside of the
+main class _**(Refer to the image inside of the description of the main class. It has been updated to contain the information
+about the implementation of the keep_alive class)**_.
